@@ -7,17 +7,21 @@ from sklearn.ensemble import RandomForestRegressor
 
 
 # Load data
-@st.cache_data
-def load_data():
-    try:
-        url = "data/day.csv"
-        df = pd.read_csv(url)
-    except FileNotFoundError:
-        st.error("Error: Data file not found. Please check the path.")
-    return df
+st.divider()
+nrows = st.slider("Select the number of rows to read:", min_value=500, max_value=1000, step=100)
+try:
+  df = pd.read_csv("data/day.csv", index_col=False, nrows=nrows)
+  st.success(f"Successfully read {nrows} Samples ")
+except FileNotFoundError:
+  st.error("Error: Data file not found. Please check the path.")
 
-df = load_data()
 
+if 'df' in locals():
+  st.subheader("Data Preview")
+  df = pd.DataFrame(df)
+  st.write(df)
+
+st.divider()
 # Data preprocessing
 df.rename(columns={'instant': 'rec_id', 'dteday': 'datetime', 'yr': 'year', 'mnth': 'month',
                    'weathersit': 'weather_condition', 'hum': 'humidity', 'cnt': 'total_count'}, inplace=True)
