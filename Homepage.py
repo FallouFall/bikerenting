@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestRegressor
 
 # Load data
 
-nrows = st.slider("Select the number of rows to read:", min_value=100, max_value=1000, step=100)
+nrows = st.slider("Select the number of rows to read:", min_value=1000, max_value=2000, step=100)
 try:
   df = pd.read_csv("data/day.csv", index_col=False, nrows=nrows)
 
