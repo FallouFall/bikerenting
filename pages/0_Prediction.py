@@ -122,5 +122,5 @@ if st.button('Predict'):
 
     prediction = model.predict([np.array(values)])
     st.markdown(
-        f'<div style="background-color: lightgreen; padding: 10px; font-size: 27px;display: flex; align-items: center; justify-content: center;">Review Score: {prediction}</div>',
+        f'<div style="background-color: lightgreen; padding: 10px; font-size: 27px;display: flex; align-items: center; justify-content: center;">Bike Rent expected: {prediction}</div>',
         unsafe_allow_html=True)
