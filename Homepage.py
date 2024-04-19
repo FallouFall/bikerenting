@@ -30,7 +30,7 @@ df['weekday'] = df['weekday'].astype('category')
 df['workingday'] = df['workingday'].astype('category')
 df['weather_condition'] = df['weather_condition'].astype('category')
 
-st.title("🚴 Bike Sharing Expectation 🚴")
+st.title("🚴 Bike Sharing System 🚴")
 
 st.sidebar.image("data/eae_img.png", width=200)
 st.sidebar.write("""
