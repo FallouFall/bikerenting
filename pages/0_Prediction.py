@@ -17,9 +17,10 @@ st.title("🚴 Bike Renting Expectation  🚴")
 st.sidebar.image("data/eae_img.png", width=200)
 st.sidebar.write("""
 Bike sharing systems represent a modern evolution of traditional bike rentals, where the entire process—from membership to rental and return—is automated. These systems enable users to effortlessly rent a bike from one location and return it to another. Currently, there are over 500 bike-sharing programs worldwide, comprising more than 500 thousand bicycles. The growing interest in these systems stems from their significant impact on traffic, environmental sustainability, and public health.
-
 Beyond their practical applications, bike sharing systems generate rich datasets that are of interest for research purposes. The goal is to develop an end-to-end regression task, where the user provides the data and receives results from the best-performing hyper-tuned machine learning model. Additionally, users have the flexibility to select deployment options that best suit their needs.
+Dataset available in http://capitalbikeshare.com/system-data. Weather information are extracted from http://www.freemeteo.com.
 """)
+
 
 
 
